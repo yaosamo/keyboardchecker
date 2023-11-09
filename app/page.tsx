@@ -6,8 +6,7 @@ import { useState, useEffect, useRef } from "react";
 export default function Home() {
   // Function to call when a key is pressed
   const [pressedKey, setPressedKey] = useState("");
-
-  const handleKeyDown = (event: any) => {
+  const handleKeyDown = (event) => {
     setPressedKey(event.key); // Set the pressed key to the state
   };
 
