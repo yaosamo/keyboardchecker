@@ -7,7 +7,7 @@ export default function Home() {
   // Function to call when a key is pressed
   const [pressedKey, setPressedKey] = useState("");
 
-  const handleKeyDown = (event) => {
+  const handleKeyDown = (event: any) => {
     setPressedKey(event.key); // Set the pressed key to the state
   };
 
