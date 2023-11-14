@@ -18,6 +18,5 @@ export default function Home() {
       window.removeEventListener("keydown", handleKeyDown);
     };
   }, []);
-  console.log(pressedKey.code);
   return <Keyboard pressed={pressedKey} />;
 }
