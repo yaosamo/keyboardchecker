@@ -1,5 +1,9 @@
-function Key() {
-  return <div className="Space">Space</div>;
+import { useState, useEffect, useRef } from "react";
+
+function History({ key }) {
+  const [history, setHistory] = useState[""];
+  setHistory(key);
+  return <div>History</div>;
 }
 
 export default function Keyboard({ pressed }) {

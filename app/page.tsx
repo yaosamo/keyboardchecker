@@ -3,6 +3,10 @@
 import Keyboard from "./components/keys";
 import { useState, useEffect, useRef } from "react";
 
+function History({ pressed }) {
+  return <div>{pressed.code}</div>;
+}
+
 export default function Home() {
   // Function to call when a key is pressed
   const [pressedKey, setPressedKey] = useState("");
@@ -18,5 +22,12 @@ export default function Home() {
       window.removeEventListener("keydown", handleKeyDown);
     };
   }, []);
-  return <Keyboard pressed={pressedKey} />;
+  return (
+    <main>
+      <div>The Moonalnder Keyboard Checker</div>
+      <Keyboard pressed={pressedKey} />
+      <History pressed={pressedKey} />
+      <div>Made by Yaosamo</div>
+    </main>
+  );
 }
