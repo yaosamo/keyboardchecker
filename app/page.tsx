@@ -1,6 +1,6 @@
 "use client"; // This is a client component 👈🏽
 
-import Keyboard from "./components/keys";
+import Keyboard from "./components/keyboard";
 import { useState, useEffect, useRef } from "react";
 
 function History({ pressed }) {
@@ -8,26 +8,13 @@ function History({ pressed }) {
 }
 
 export default function Home() {
-  // Function to call when a key is pressed
-  const [pressedKey, setPressedKey] = useState("");
-  const handleKeyDown = (event) => {
-    setPressedKey(event); // Set the pressed key to the state
-  };
-  useEffect(() => {
-    // Attach the event listener to the window object
-    window.addEventListener("keydown", handleKeyDown);
-
-    // Cleanup the event listener
-    return () => {
-      window.removeEventListener("keydown", handleKeyDown);
-    };
-  }, []);
   return (
-    <main>
-      <div>The Moonalnder Keyboard Checker</div>
-      <Keyboard pressed={pressedKey} />
-      <History pressed={pressedKey} />
-      <div>Made by Yaosamo</div>
+    <main className="min-h-screen p-16">
+      <div>Keyboard Checker</div>
+      <Keyboard />
+      <div className="flex flex-row">
+        <div>yaosamo.software</div>
+      </div>
     </main>
   );
 }

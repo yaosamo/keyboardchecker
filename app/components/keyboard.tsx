@@ -1,12 +1,7 @@
 import { useState, useEffect, useRef } from "react";
+import Key from "./key";
 
-function History({ key }) {
-  const [history, setHistory] = useState[""];
-  setHistory(key);
-  return <div>History</div>;
-}
-
-export default function Keyboard({ pressed }) {
+export default function Keyboard() {
   const keyCodes = [
     { key: "+ =", code: 187 },
     { key: "1", code: 49 },
@@ -85,32 +80,29 @@ export default function Keyboard({ pressed }) {
     { key: "LR 1", code: "LR" },
   ];
 
+  const [pressedKey, setPressedKey] = useState("");
+
+  const handleKeyDown = (event) => {
+    setPressedKey(event); // Set the pressed key to the state
+  };
+
+  useEffect(() => {
+    // Attach the event listener to the window object
+    window.addEventListener("keydown", handleKeyDown);
+
+    // Cleanup the event listener
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
+
   return (
-    <main className="min-h-screen p-24">
-      <div className="grid grid-rows-[repeat(5,1fr),2fr] grid-cols-[repeat(7,1fr),5fr,repeat(7,1fr)] gap-1">
-        {keyCodes.map(function (key, index) {
-          return (
-            <div
-              className={key.code === null ? "empty" : ""}
-              key={index}
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-                alignItems: "center",
-                backgroundColor:
-                  pressed.code === key.code || pressed.keyCode === key.code
-                    ? "green"
-                    : "white",
-                minWidth: "4rem",
-                minHeight: "4rem",
-              }}
-            >
-              <div style={{ textAlign: "center" }}>{key.key}</div>
-            </div>
-          );
-        })}
-      </div>
-    </main>
+    <div className="pt-10 grid grid-rows-[repeat(5,1fr),2fr] grid-cols-[repeat(7,1fr),5fr,repeat(7,1fr)] gap-1">
+      {keyCodes.map(function (keyboardKey, index) {
+        return (
+          <Key keyboardKey={keyboardKey} pressedKey={pressedKey} key={index} />
+        );
+      })}
+    </div>
   );
 }
