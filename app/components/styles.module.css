@@ -13,8 +13,8 @@
 .keyboard_key {
   background-color: var(--button-background);
   border: 1px solid rgb(var(--button-border));
-  min-width: 4vw;
-  min-height: 4vw;
+  width: 4.5vw;
+  height: 4.5vw;
 }
 
 .keyboard_key_active,

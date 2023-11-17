@@ -28,14 +28,13 @@ export default function Home() {
   }, [keysPressed]);
 
   return (
-    <main className="min-h-screen p-16">
+    <main className="min-h-screen border flex flex-col justify-between pl-28 pr-28 pt-16 pb-16">
       <div className={styles.heading}>Keyboard Checker</div>
-      <div className="flex flex-col justify-between">
-        <Keyboard keysActive={keysActive} keysPressed={keysPressed} />
-        <div className="flex flex-row justify-between">
-          <div className={styles.heading}>History</div>
-          <div className={styles.heading}>yaosamo.software</div>
-        </div>
+
+      <Keyboard keysActive={keysActive} keysPressed={keysPressed} />
+      <div className="flex flex-row justify-between">
+        <div className={styles.heading}>History</div>
+        <div className={styles.heading}>yaosamo.software</div>
       </div>
     </main>
   );
