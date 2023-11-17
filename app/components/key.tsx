@@ -7,9 +7,11 @@ export default function Key({ keyboardKey, keysPressed, keysActive }) {
 
   return (
     <div
-      className={` ${isKeyNull && styles.nullKey} ${styles.keyboard_key} ${
-        isKeyPressed && styles.keyboard_key_pressed
-      } ${isKeyActive && styles.keyboard_key_active}`}
+      className={`
+      ${styles.keyboard_key}
+      ${isKeyNull && styles.nullKey}
+      ${isKeyPressed && styles.keyboard_key_pressed}
+      ${isKeyActive && styles.keyboard_key_active}`}
     >
       {keyboardKey.key}
     </div>

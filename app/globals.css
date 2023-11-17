@@ -18,8 +18,13 @@
   --button-background-pressed: 87, 87, 87;
   --button-border-pressed: 62, 62, 62;
 
+  --button-background-active: 232, 232, 232;
+  --button-border-active: 62, 62, 62;
+
   --background: 255, 255, 255;
-  --background-end-rgb: 255, 255, 255;
+
+  --foreground-light: 255, 255, 255;
+  --foreground-dark: 93, 93, 93;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -32,6 +37,5 @@
 
 body {
   font-size: 11pt;
-  color: rgb(var(--foreground-rgb));
   background: (var(--background));
 }
