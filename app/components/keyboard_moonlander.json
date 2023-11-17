@@ -1,0 +1,452 @@
+[
+  {
+    "key": "+ =",
+    "code": 187,
+    "pressed": false,
+    "active": false
+  },
+  {
+    "key": "1",
+    "code": 49,
+    "pressed": false,
+    "active": false
+  },
+  {
+    "key": "2",
+    "code": 50,
+    "pressed": false,
+    "active": false
+  },
+  {
+    "key": "3",
+    "code": 51,
+    "pressed": false,
+    "active": false
+  },
+  {
+    "key": "4",
+    "code": 52,
+    "pressed": false,
+    "active": false
+  },
+  {
+    "key": "5",
+    "code": 53,
+    "pressed": false,
+    "active": false
+  },
+  {
+    "key": "←",
+    "code": 37,
+    "pressed": false,
+    "active": false
+  },
+  {
+    "key": " ",
+    "code": null,
+    "pressed": false,
+    "active": false
+  },
+  {
+    "key": "→",
+    "code": 39,
+    "pressed": false,
+    "active": false
+  },
+  {
+    "key": "6",
+    "code": 54,
+    "pressed": false,
+    "active": false
+  },
+  {
+    "key": "7",
+    "code": 55,
+    "pressed": false,
+    "active": false
+  },
+  {
+    "key": "8",
+    "code": 56,
+    "pressed": false,
+    "active": false
+  },
+  {
+    "key": "9",
+    "code": 57,
+    "pressed": false,
+    "active": false
+  },
+  {
+    "key": "0",
+    "code": 48,
+    "pressed": false,
+    "active": false
+  },
+  {
+    "key": "— -",
+    "code": 189,
+    "pressed": false,
+    "active": false
+  },
+  {
+    "key": "Del",
+    "code": 46,
+    "pressed": false,
+    "active": false
+  },
+  {
+    "key": "Q",
+    "code": 81,
+    "pressed": false,
+    "active": false
+  },
+  {
+    "key": "W",
+    "code": 87,
+    "pressed": false,
+    "active": false
+  },
+  {
+    "key": "E",
+    "code": 69,
+    "pressed": false,
+    "active": false
+  },
+  {
+    "key": "R",
+    "code": 82,
+    "pressed": false,
+    "active": false
+  },
+  {
+    "key": "T",
+    "code": 84,
+    "pressed": false,
+    "active": false
+  },
+  {
+    "key": "LR1",
+    "code": "LR",
+    "pressed": false,
+    "active": false
+  },
+  {
+    "key": " ",
+    "code": null,
+    "pressed": false,
+    "active": false
+  },
+  {
+    "key": "LR1",
+    "code": "LR",
+    "pressed": false,
+    "active": false
+  },
+  {
+    "key": "Y",
+    "code": 89,
+    "pressed": false,
+    "active": false
+  },
+  {
+    "key": "U",
+    "code": 85,
+    "pressed": false,
+    "active": false
+  },
+  {
+    "key": "I",
+    "code": 73,
+    "pressed": false,
+    "active": false
+  },
+  {
+    "key": "O",
+    "code": 79,
+    "pressed": false,
+    "active": false
+  },
+  {
+    "key": "P",
+    "code": 80,
+    "pressed": false,
+    "active": false
+  },
+  {
+    "key": "| \\",
+    "code": 220,
+    "pressed": false,
+    "active": false
+  },
+  {
+    "key": "⌫",
+    "code": 8,
+    "pressed": false,
+    "active": false
+  },
+  {
+    "key": "A",
+    "code": 65,
+    "pressed": false,
+    "active": false
+  },
+  {
+    "key": "S",
+    "code": 83,
+    "pressed": false,
+    "active": false
+  },
+  {
+    "key": "D",
+    "code": 68,
+    "pressed": false,
+    "active": false
+  },
+  {
+    "key": "F",
+    "code": 70,
+    "pressed": false,
+    "active": false
+  },
+  {
+    "key": "G",
+    "code": 71,
+    "pressed": false,
+    "active": false
+  },
+  {
+    "key": "Hyper",
+    "code": "Hyper",
+    "pressed": false,
+    "active": false
+  },
+  {
+    "key": " ",
+    "code": null,
+    "pressed": false,
+    "active": false
+  },
+  {
+    "key": "Meh",
+    "code": "Meh",
+    "pressed": false,
+    "active": false
+  },
+  {
+    "key": "H",
+    "code": 72,
+    "pressed": false,
+    "active": false
+  },
+  {
+    "key": "J",
+    "code": 74,
+    "pressed": false,
+    "active": false
+  },
+  {
+    "key": "K",
+    "code": 75,
+    "pressed": false,
+    "active": false
+  },
+  {
+    "key": "L",
+    "code": 76,
+    "pressed": false,
+    "active": false
+  },
+  {
+    "key": ": ;",
+    "code": 186,
+    "pressed": false,
+    "active": false
+  },
+  {
+    "key": " \" ' ",
+    "code": 222,
+    "pressed": false,
+    "active": false
+  },
+  {
+    "key": "Shift",
+    "code": "ShiftLeft",
+    "pressed": false,
+    "active": false
+  },
+  {
+    "key": "Z",
+    "code": 90,
+    "pressed": false,
+    "active": false
+  },
+  {
+    "key": "X",
+    "code": 88,
+    "pressed": false,
+    "active": false
+  },
+  {
+    "key": "C",
+    "code": 67,
+    "pressed": false,
+    "active": false
+  },
+  {
+    "key": "V",
+    "code": 86,
+    "pressed": false,
+    "active": false
+  },
+  {
+    "key": "B",
+    "code": 66,
+    "pressed": false,
+    "active": false
+  },
+  {
+    "key": " ",
+    "code": null,
+    "pressed": false,
+    "active": false
+  },
+  {
+    "key": " ",
+    "code": null,
+    "pressed": false,
+    "active": false
+  },
+  {
+    "key": " ",
+    "code": null,
+    "pressed": false,
+    "active": false
+  },
+  {
+    "key": "N",
+    "code": 78,
+    "pressed": false,
+    "active": false
+  },
+  {
+    "key": "M",
+    "code": 77,
+    "pressed": false,
+    "active": false
+  },
+  {
+    "key": "< ,",
+    "code": 188,
+    "pressed": false,
+    "active": false
+  },
+  {
+    "key": "> .",
+    "code": 190,
+    "pressed": false,
+    "active": false
+  },
+  {
+    "key": "? /",
+    "code": 191,
+    "pressed": false,
+    "active": false
+  },
+  {
+    "key": "Shift",
+    "code": "ShiftRight",
+    "pressed": false,
+    "active": false
+  },
+  {
+    "key": "~ `",
+    "code": 192,
+    "pressed": false,
+    "active": false
+  },
+  {
+    "key": "Caps Word",
+    "code": 20,
+    "pressed": false,
+    "active": false
+  },
+  {
+    "key": " ",
+    "code": "Empty",
+    "pressed": false,
+    "active": false
+  },
+  {
+    "key": "←",
+    "code": 37,
+    "pressed": false,
+    "active": false
+  },
+  {
+    "key": "→",
+    "code": 39,
+    "pressed": false,
+    "active": false
+  },
+  {
+    "key": " ",
+    "code": null,
+    "pressed": false,
+    "active": false
+  },
+  {
+    "key": " ",
+    "code": null,
+    "pressed": false,
+    "active": false
+  },
+  {
+    "key": " ",
+    "code": null,
+    "pressed": false,
+    "active": false
+  },
+  {
+    "key": " ",
+    "code": null,
+    "pressed": false,
+    "active": false
+  },
+  {
+    "key": " ",
+    "code": null,
+    "pressed": false,
+    "active": false
+  },
+  {
+    "key": "↑",
+    "code": 38,
+    "pressed": false,
+    "active": false
+  },
+  {
+    "key": "↓",
+    "code": 40,
+    "pressed": false,
+    "active": false
+  },
+  {
+    "key": "{ [",
+    "code": 219,
+    "pressed": false,
+    "active": false
+  },
+  {
+    "key": "} ]",
+    "code": 221,
+    "pressed": false,
+    "active": false
+  },
+  {
+    "key": "LR 1",
+    "code": "LR",
+    "pressed": false,
+    "active": false
+  }
+]

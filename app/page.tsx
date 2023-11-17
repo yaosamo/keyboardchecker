@@ -1,33 +1,42 @@
 "use client"; // This is a client component 👈🏽
-
-import Keyboard from "./components/keys";
 import { useState, useEffect, useRef } from "react";
-
-function History({ pressed }) {
-  return <div>{pressed.code}</div>;
-}
+import Keyboard from "./components/keyboard";
+import styles from "./components/styles.module.css";
 
 export default function Home() {
-  // Function to call when a key is pressed
-  const [pressedKey, setPressedKey] = useState("");
-  const handleKeyDown = (event) => {
-    setPressedKey(event); // Set the pressed key to the state
-  };
-  useEffect(() => {
-    // Attach the event listener to the window object
-    window.addEventListener("keydown", handleKeyDown);
+  const [keysPressed, setKeysPressed] = useState({});
+  const [keysActive, setKeysActive] = useState({});
 
-    // Cleanup the event listener
+  const handleKeyDown = (event) => {
+    setKeysPressed((prevKeys) => ({ ...prevKeys, [event.keyCode]: true }));
+    setKeysActive((prevKeys) => ({ ...prevKeys, [event.keyCode]: true }));
+  };
+
+  const handleKeyUp = (event) => {
+    setKeysPressed((prevKeys) => ({ ...prevKeys, [event.keyCode]: false }));
+  };
+
+  useEffect(() => {
+    window.addEventListener("keydown", handleKeyDown);
+    window.addEventListener("keyup", handleKeyUp);
+
+    // Cleanup
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
+      window.removeEventListener("keyup", handleKeyUp);
     };
-  }, []);
+  }, [keysPressed]);
+
   return (
-    <main>
-      <div>The Moonalnder Keyboard Checker</div>
-      <Keyboard pressed={pressedKey} />
-      <History pressed={pressedKey} />
-      <div>Made by Yaosamo</div>
+    <main className="min-h-screen p-16">
+      <div className={styles.heading}>Keyboard Checker</div>
+      <div className="flex flex-col justify-between">
+        <Keyboard keysActive={keysActive} keysPressed={keysPressed} />
+        <div className="flex flex-row justify-between">
+          <div className={styles.heading}>History</div>
+          <div className={styles.heading}>yaosamo.software</div>
+        </div>
+      </div>
     </main>
   );
 }
