@@ -14,7 +14,10 @@
 :root {
   --button-border: 223, 223, 223;
   --button-background: 255, 255, 255;
-  --button-background-pressed: 62, 62, 62;
+
+  --button-background-pressed: 87, 87, 87;
+  --button-border-pressed: 62, 62, 62;
+
   --background: 255, 255, 255;
   --background-end-rgb: 255, 255, 255;
 }
@@ -28,7 +31,7 @@
 }
 
 body {
-  font-size: 12pt;
+  font-size: 11pt;
   color: rgb(var(--foreground-rgb));
   background: (var(--background));
 }

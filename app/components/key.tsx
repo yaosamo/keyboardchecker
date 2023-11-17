@@ -1,29 +1,15 @@
-import { useState, useEffect, useRef } from "react";
 import styles from "./styles.module.css";
 
-export default function Key({ keyboardKey, pressedKey }) {
+export default function Key({ keyboardKey, keysPressed, keysActive }) {
+  const isKeyPressed = keysPressed[keyboardKey.code];
+  const isKeyActive = keysActive[keyboardKey.code];
+  const isKeyNull = keyboardKey.code === null;
+
   return (
     <div
-      className={
-        keyboardKey.code === pressedKey.keyCode
-          ? styles.keyboard_key_pressed
-          : styles.keyboard_key
-      }
-      // onKeyUp={}
-      // style={{
-      //   display: "flex",
-      //   flexDirection: "column",
-      //   justifyContent: "center",
-      //   alignItems: "center",
-      //   backgroundColor:
-      //     pressed.code === key.code || pressed.keyCode === key.code
-      //       ? "#575757"
-      //       : "white",
-      //   minWidth: "4rem",
-      //   minHeight: "4rem",
-      //   border: "1px solid",
-      //   borderRadius: "6px",
-      // }}
+      className={` ${isKeyNull && styles.nullKey} ${styles.keyboard_key} ${
+        isKeyPressed && styles.keyboard_key_pressed
+      } ${isKeyActive && styles.keyboard_key_active}`}
     >
       {keyboardKey.key}
     </div>
