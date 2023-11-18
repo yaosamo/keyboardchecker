@@ -1,8 +1,10 @@
 import styles from "./styles.module.css";
 
 export default function Key({ keyboardKey, keysPressed, keysActive }) {
-  const isKeyPressed = keysPressed[keyboardKey.code];
-  const isKeyActive = keysActive[keyboardKey.code];
+  const isKeyPressed =
+    keysPressed[keyboardKey.code] || keysPressed[keyboardKey.key];
+  const isKeyActive =
+    keysActive[keyboardKey.code] || keysActive[keyboardKey.key];
   const isKeyNull = keyboardKey.code === null;
 
   return (

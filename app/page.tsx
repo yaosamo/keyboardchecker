@@ -8,12 +8,24 @@ export default function Home() {
   const [keysActive, setKeysActive] = useState({});
 
   const handleKeyDown = (event) => {
-    setKeysPressed((prevKeys) => ({ ...prevKeys, [event.keyCode]: true }));
-    setKeysActive((prevKeys) => ({ ...prevKeys, [event.keyCode]: true }));
+    setKeysPressed((prevKeys) => ({
+      ...prevKeys,
+      [event.code]: true,
+      [event.keyCode]: true,
+    }));
+    setKeysActive((prevKeys) => ({
+      ...prevKeys,
+      [event.keyCode]: true,
+      [event.code]: true,
+    }));
   };
 
   const handleKeyUp = (event) => {
-    setKeysPressed((prevKeys) => ({ ...prevKeys, [event.keyCode]: false }));
+    setKeysPressed((prevKeys) => ({
+      ...prevKeys,
+      [event.keyCode]: false,
+      [event.code]: false,
+    }));
   };
 
   useEffect(() => {
@@ -25,7 +37,7 @@ export default function Home() {
       window.removeEventListener("keydown", handleKeyDown);
       window.removeEventListener("keyup", handleKeyUp);
     };
-  }, [keysPressed]);
+  });
 
   return (
     <main className="min-h-screen border flex flex-col justify-between pl-28 pr-28 pt-16 pb-16">
