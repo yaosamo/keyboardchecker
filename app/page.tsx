@@ -34,7 +34,7 @@ export default function Home() {
       <Keyboard keysActive={keysActive} keysPressed={keysPressed} />
       <div className="flex flex-row justify-between">
         <div className={styles.heading}>History</div>
-        <div className={styles.heading}>creative-club</div>
+        <div className={styles.heading}>creative-club.space</div>
       </div>
     </main>
   );
