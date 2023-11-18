@@ -13,6 +13,15 @@ export default function Home() {
       [event.code]: true,
       [event.keyCode]: true,
     }));
+
+    if (
+      event.code === "Space" ||
+      event.code === "Tab" ||
+      event.code === "Meta"
+    ) {
+      event.preventDefault(); // Prevent the default action
+    }
+
     setKeysActive((prevKeys) => ({
       ...prevKeys,
       [event.keyCode]: true,

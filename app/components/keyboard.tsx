@@ -1,5 +1,6 @@
 import Key from "./key";
 import MoonalnderKeys from "./keyboard_moonlander.json";
+import MoonLayers from "./keyboard_moonlander_layers.json";
 
 export default function Keyboard({ keysPressed, keysActive }) {
   return (
