@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import Key from "./key";
-import MoonalnderKeys from "./keyboard_moonlander.json";
 import MoonalnderKeysL from "./keyboard_moonlander_layers.json";
 import styles from "./styles.module.css";
 
