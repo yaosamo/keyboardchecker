@@ -42,7 +42,7 @@ export default function Keyboard({ keysPressed, keysActive, pressedKey }) {
     <main>
       <button onClick={() => setActiveLayerId(0)}>Layer 0</button>
       <button onClick={() => setActiveLayerId(1)}>Layer 1</button>
-      <div className="pt-10 grid grid-rows-[repeat(5,1fr),2fr] grid-cols-[repeat(7,1fr),5fr,repeat(7,1fr)] gap-1">
+      <div className="pt-10 grid grid-rows-[repeat(5,1fr),2fr] grid-cols-[repeat(7,1fr),5fr,repeat(7,1fr)]">
         {MoonlanderKeysLayers[activeLayerId].keys.map(function (
           keyboardKey,
           index
@@ -56,8 +56,9 @@ export default function Keyboard({ keysPressed, keysActive, pressedKey }) {
             />
           );
         })}
-        <div className={styles.clusters}>
-          <div className={styles.clusterleft}>
+
+        <div className="grid grid-row-start-5 row-span-2 grid-cols-[3fr,1fr,3fr] col-start-7 col-span-3 ">
+          <div className="grid grid-cols-[1fr,1fr,1fr]">
             {MoonlanderKeysLayers[activeLayerId].clusterleft.map(function (
               keyboardKey,
               index
@@ -72,7 +73,8 @@ export default function Keyboard({ keysPressed, keysActive, pressedKey }) {
               );
             })}
           </div>
-          <div className={styles.clusterright}>
+          <div className="grid grid-cols-[1fr]"></div>
+          <div className="grid grid-cols-[1fr,1fr,1fr]">
             {MoonlanderKeysLayers[activeLayerId].clusterright.map(function (
               keyboardKey,
               index

@@ -15,6 +15,7 @@ export default function Home() {
       [event.code]: true,
       [event.keyCode]: true,
     }));
+    console.log("Pressed", event);
 
     if (
       event.code === "Space" ||
@@ -51,7 +52,7 @@ export default function Home() {
   });
 
   return (
-    <main className="min-h-screen border flex flex-col justify-between pl-28 pr-28 pt-16 pb-16">
+    <main className="min-h-screen border flex flex-col justify-between pl-24 pr-24 pt-16 pb-16">
       <div className={styles.heading}>Keyboard Checker</div>
       <Keyboard
         keysActive={keysActive}

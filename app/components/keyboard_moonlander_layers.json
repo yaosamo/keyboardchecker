@@ -340,7 +340,7 @@
       },
       {
         "key": "Esc",
-        "code": 13
+        "code": 27
       },
       {
         "key": "⌥",
@@ -361,7 +361,7 @@
     "keys": [
       {
         "key": "Esc",
-        "code": 112
+        "code": 27
       },
       {
         "key": "F1",
@@ -369,19 +369,19 @@
       },
       {
         "key": "F2",
-        "code": 50
+        "code": 113
       },
       {
         "key": "F3",
-        "code": 51
+        "code": 114
       },
       {
         "key": "F4",
-        "code": 52
+        "code": 115
       },
       {
         "key": "F5",
-        "code": 53
+        "code": 116
       },
       {
         "key": "←",
@@ -397,27 +397,27 @@
       },
       {
         "key": "F6",
-        "code": 54
+        "code": 117
       },
       {
         "key": "F7",
-        "code": 55
+        "code": 118
       },
       {
         "key": "F8",
-        "code": 56
+        "code": 119
       },
       {
         "key": "F9",
-        "code": 57
+        "code": 120
       },
       {
         "key": "F10",
-        "code": 48
+        "code": 121
       },
       {
         "key": "F11",
-        "code": 189
+        "code": 122
       },
       {
         "key": "Del",
@@ -425,23 +425,23 @@
       },
       {
         "key": "!",
-        "code": 81
+        "code": 49
       },
       {
         "key": "@",
-        "code": 87
+        "code": 50
       },
       {
         "key": "{",
-        "code": 69
+        "code": 219
       },
       {
         "key": "}",
-        "code": 82
+        "code": 221
       },
       {
         "key": "|",
-        "code": 84
+        "code": 220
       },
       {
         "key": "LR1",
@@ -457,23 +457,23 @@
       },
       {
         "key": "↑",
-        "code": 89
+        "code": 38
       },
       {
-        "key": "7",
-        "code": 85
+        "key": "Num 7",
+        "code": 103
       },
       {
-        "key": "8",
-        "code": 73
+        "key": "Num 8",
+        "code": 104
       },
       {
-        "key": "9",
-        "code": 79
+        "key": "Num 9",
+        "code": 105
       },
       {
         "key": "*",
-        "code": 80
+        "code": 106
       },
       {
         "key": "F12",
@@ -485,23 +485,23 @@
       },
       {
         "key": "#",
-        "code": 65
+        "code": 51
       },
       {
         "key": "$",
-        "code": 83
+        "code": 52
       },
       {
         "key": "(",
-        "code": 68
+        "code": 57
       },
       {
         "key": ")",
-        "code": 70
+        "code": 48
       },
       {
         "key": "`",
-        "code": 71
+        "code": 192
       },
       {
         "key": "Hyper",
@@ -517,19 +517,19 @@
       },
       {
         "key": "↓",
-        "code": 72
+        "code": 39
       },
       {
-        "key": "4",
-        "code": 74
+        "key": "Num 4",
+        "code": 100
       },
       {
-        "key": "5",
-        "code": 75
+        "key": "Num 5",
+        "code": 101
       },
       {
-        "key": "6",
-        "code": 76
+        "key": "Num 6",
+        "code": 102
       },
       {
         "key": "+",
@@ -545,23 +545,23 @@
       },
       {
         "key": "%",
-        "code": 90
+        "code": 53
       },
       {
         "key": "^",
-        "code": 88
+        "code": 54
       },
       {
         "key": "[",
-        "code": 67
+        "code": 219
       },
       {
         "key": "]",
-        "code": 86
+        "code": 221
       },
       {
         "key": "~",
-        "code": 66
+        "code": 192
       },
       {
         "key": " ",
@@ -577,23 +577,23 @@
       },
       {
         "key": "&",
-        "code": 78
+        "code": 55
       },
       {
-        "key": "1",
-        "code": 77
+        "key": "Num 1",
+        "code": 97
       },
       {
-        "key": "2",
-        "code": 188
+        "key": "Num 2",
+        "code": 98
       },
       {
-        "key": "3",
-        "code": 190
+        "key": "Num 3",
+        "code": 99
       },
       {
         "key": "\"",
-        "code": 191
+        "code": 220
       },
       {
         "key": "Shift",
@@ -605,7 +605,7 @@
       },
       {
         "key": ",",
-        "code": 20
+        "code": 188
       },
       {
         "key": " ",
@@ -645,15 +645,15 @@
       },
       {
         "key": ".",
-        "code": 40
+        "code": 110
       },
       {
-        "key": "0",
+        "key": "Num 0",
         "code": 219
       },
       {
         "key": "=",
-        "code": 221
+        "code": 187
       },
       {
         "key": "LR 1",
@@ -662,8 +662,8 @@
     ],
     "clusterleft": [
       {
-        "key": "⌥",
-        "code": "AltLeft"
+        "key": "",
+        "code": "Special"
       },
       {
         "key": "",
@@ -674,16 +674,16 @@
         "code": null
       },
       {
-        "key": "␣",
-        "code": 32
+        "key": "",
+        "code": "Special"
       },
       {
-        "key": "⌫",
-        "code": 8
+        "key": "",
+        "code": "Special"
       },
       {
-        "key": "⌘",
-        "code": 91
+        "key": "",
+        "code": "Special"
       }
     ],
     "clusterright": [
@@ -696,20 +696,20 @@
         "code": null
       },
       {
-        "key": "Esc",
-        "code": 13
+        "key": "",
+        "code": "Special"
       },
       {
-        "key": "⌥",
-        "code": "AltRight"
+        "key": "",
+        "code": "Special"
       },
       {
-        "key": "Tab",
-        "code": 9
+        "key": "",
+        "code": "Special"
       },
       {
-        "key": "↵",
-        "code": 13
+        "key": "",
+        "code": "Special"
       }
     ]
   }
