@@ -23,8 +23,11 @@ export default function Keyboard({ keysPressed, keysActive }) {
     };
   });
 
+  const [pressedKeysArray, setPressedKeysArray] = useState<KeyType[]>([]);
+
   useEffect(() => {
     let pressedKeysArray = [];
+
     const findPressedKeyLayerId = () => {
       for (const layer of MoonlanderKeysLayers) {
         const pressedKey = layer.keys.find(
