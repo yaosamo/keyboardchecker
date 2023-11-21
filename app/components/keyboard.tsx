@@ -23,6 +23,12 @@ export default function Keyboard({ keysPressed, keysActive }) {
     };
   });
 
+  type KeysObject = {
+    layerId: number;
+    key: string;
+    code: number | null | string;
+  };
+
   const [pressedKeysArray, setPressedKeysArray] = useState<KeysObject[]>([]);
 
   useEffect(() => {
