@@ -64,27 +64,21 @@ export default function Home() {
       <div className="flex flex-row justify-center">
         <div className={styles.heading}>
           {" "}
-          <div className="flex transition-all	transition-duration: 300ms flex-row-reverse gap-2">
+          <div className="flex flex-row-reverse gap-2">
             {[...history].map((key, index) => {
               let opacity = 1;
-
               if (index >= 5 && index <= 12) {
                 opacity = 1 - (index - 5) / 8;
               }
-
               return (
-                <p
-                  key={index}
-                  className="transition-all	transition-duration: 300ms"
-                  style={{ opacity: opacity }}
-                >
+                <p key={index} style={{ opacity: opacity }}>
                   {key}
                 </p>
               );
             })}
           </div>
         </div>
-        {/* <div className={styles.heading}>
+        {/* <div className={styles.creativeclub}>
           Made at the <a>Creative Club</a>
         </div> */}
       </div>
