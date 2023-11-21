@@ -59,20 +59,26 @@ export default function Home() {
     <main className="min-h-screen flex flex-col justify-between pl-24 pr-24 pt-16 pb-16">
       <div className={styles.heading}>Keyboard Checker</div>
       <Keyboard keysActive={keysActive} keysPressed={keysPressed} />
-      <div className="flex flex-row justify-between">
+      <div className="flex flex-row justify-center">
         <div className={styles.heading}>
           {" "}
-          <div className="flex flex-row gap-2">
-            {history.map((key, index) => (
-              <p className="flex" key={index}>
-                {key}
-              </p>
-            ))}
+          <div className=" flex flex-row-reverse gap-2">
+            {[...history].map((key, index) => {
+              let opacity = 1; // Default opacity
+              if (index >= 6 && index <= 9) {
+                opacity = 1 - (index - 6) / 4;
+              }
+              return (
+                <p className="" key={index} style={{ opacity: opacity }}>
+                  {key}
+                </p>
+              );
+            })}
           </div>
         </div>
-        <div className={styles.heading}>
+        {/* <div className={styles.heading}>
           Made at the <a>Creative Club</a>
-        </div>
+        </div> */}
       </div>
     </main>
   );
