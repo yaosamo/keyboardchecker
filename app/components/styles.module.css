@@ -64,3 +64,11 @@
   grid-column-start: 9;
   gap: 0.25rem;
 }
+
+.creativeclub {
+  position: absolute; /* Use 'absolute' if you want it relative to a container */
+  right: 0;
+  bottom: 0;
+  margin-bottom: 0em;
+  margin-right: 0em;
+}

@@ -7,11 +7,12 @@ export default function Home() {
   const [keysPressed, setKeysPressed] = useState({});
   const [keysActive, setKeysActive] = useState({});
   const [history, setHistory] = useState<string[]>([]);
+  const [newKeyOpacity, setNewKeyOpacity] = useState(0); //
 
   const handleKeyDown = (event) => {
     setHistory((prevHistory) => [
       event.key,
-      ...prevHistory.slice(0, 9), // Keep only the last 9 plus the new key
+      ...prevHistory.slice(0, 12), // Keep only the last 9 plus the new key
     ]);
 
     setKeysPressed((prevKeys) => ({
@@ -25,7 +26,8 @@ export default function Home() {
       event.code === "Tab" ||
       event.code === "Meta" ||
       event.code === "ArrowUp" ||
-      event.code === "ArrowDown"
+      event.code === "ArrowDown" ||
+      event.code === "META"
     ) {
       event.preventDefault(); // Prevent the default action
     }
@@ -59,20 +61,26 @@ export default function Home() {
     <main className="min-h-screen flex flex-col justify-between pl-24 pr-24 pt-16 pb-16">
       <div className={styles.heading}>Keyboard Checker</div>
       <Keyboard keysActive={keysActive} keysPressed={keysPressed} />
-      <div className="flex flex-row justify-between">
+      <div className="flex flex-row justify-center">
         <div className={styles.heading}>
           {" "}
-          <div className="flex flex-row gap-2">
-            {history.map((key, index) => (
-              <p className="flex" key={index}>
-                {key}
-              </p>
-            ))}
+          <div className="flex flex-row-reverse gap-2">
+            {[...history].map((key, index) => {
+              let opacity = 1;
+              if (index >= 5 && index <= 12) {
+                opacity = 1 - (index - 5) / 8;
+              }
+              return (
+                <p key={index} style={{ opacity: opacity }}>
+                  {key}
+                </p>
+              );
+            })}
           </div>
         </div>
-        <div className={styles.heading}>
+        {/* <div className={styles.creativeclub}>
           Made at the <a>Creative Club</a>
-        </div>
+        </div> */}
       </div>
     </main>
   );
