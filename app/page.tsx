@@ -55,7 +55,6 @@ export default function Home() {
       window.removeEventListener("keyup", handleKeyUp);
     };
   }, [keysPressed]);
-  console.log(history);
   return (
     <main className="min-h-screen flex flex-col justify-between pl-24 pr-24 pt-16 pb-16">
       <div className={styles.heading}>Keyboard Checker</div>

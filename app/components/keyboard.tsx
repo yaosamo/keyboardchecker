@@ -23,10 +23,10 @@ export default function Keyboard({ keysPressed, keysActive }) {
     };
   });
 
-  const [pressedKeysArray, setPressedKeysArray] = useState<KeyType[]>([]);
+  const [pressedKeysArray, setPressedKeysArray] = useState<KeysObject[]>([]);
 
   useEffect(() => {
-    let pressedKeysArray = [];
+    setPressedKeysArray([]);
 
     const findPressedKeyLayerId = () => {
       for (const layer of MoonlanderKeysLayers) {
@@ -41,15 +41,21 @@ export default function Keyboard({ keysPressed, keysActive }) {
         );
 
         if (pressedKey) {
-          pressedKeysArray.push(pressedKey);
+          setPressedKeysArray((prevArray) => [...prevArray, pressedKey]);
         }
 
         if (pressedKeyInClusterR) {
-          pressedKeysArray.push(pressedKeyInClusterR);
+          setPressedKeysArray((prevArray) => [
+            ...prevArray,
+            pressedKeyInClusterR,
+          ]);
         }
 
         if (pressedKeyInClusterL) {
-          pressedKeysArray.push(pressedKeyInClusterL);
+          setPressedKeysArray((prevArray) => [
+            ...prevArray,
+            pressedKeyInClusterL,
+          ]);
         }
       }
       return null;
