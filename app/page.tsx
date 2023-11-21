@@ -7,11 +7,12 @@ export default function Home() {
   const [keysPressed, setKeysPressed] = useState({});
   const [keysActive, setKeysActive] = useState({});
   const [history, setHistory] = useState<string[]>([]);
+  const [newKeyOpacity, setNewKeyOpacity] = useState(0); //
 
   const handleKeyDown = (event) => {
     setHistory((prevHistory) => [
       event.key,
-      ...prevHistory.slice(0, 9), // Keep only the last 9 plus the new key
+      ...prevHistory.slice(0, 12), // Keep only the last 9 plus the new key
     ]);
 
     setKeysPressed((prevKeys) => ({
@@ -25,7 +26,8 @@ export default function Home() {
       event.code === "Tab" ||
       event.code === "Meta" ||
       event.code === "ArrowUp" ||
-      event.code === "ArrowDown"
+      event.code === "ArrowDown" ||
+      event.code === "META"
     ) {
       event.preventDefault(); // Prevent the default action
     }
@@ -62,14 +64,20 @@ export default function Home() {
       <div className="flex flex-row justify-center">
         <div className={styles.heading}>
           {" "}
-          <div className=" flex flex-row-reverse gap-2">
+          <div className="flex transition-all	transition-duration: 300ms flex-row-reverse gap-2">
             {[...history].map((key, index) => {
-              let opacity = 1; // Default opacity
-              if (index >= 6 && index <= 9) {
-                opacity = 1 - (index - 6) / 4;
+              let opacity = 1;
+
+              if (index >= 5 && index <= 12) {
+                opacity = 1 - (index - 5) / 8;
               }
+
               return (
-                <p className="" key={index} style={{ opacity: opacity }}>
+                <p
+                  key={index}
+                  className="transition-all	transition-duration: 300ms"
+                  style={{ opacity: opacity }}
+                >
                   {key}
                 </p>
               );
