@@ -15,15 +15,13 @@
 
 .keyboard_key {
   background-color: rgb(var(--button-background));
-  border: 1px solid rgb(var(--button-border));
 }
 
 .keyboard_key_pressed {
   transition: all 0.1s ease-out;
   transform: scale(0.94);
   background-color: rgb(var(--button-background-pressed)) !important;
-  border: 1px solid rgb(var(--button-border-pressed)) !important;
-  color: rgb(var(--textHigh)) !important;
+  color: rgb(var(--textMed)) !important;
 }
 
 .keyboard_key_active {
@@ -86,8 +84,8 @@
 }
 
 .radiobuttonActive {
-  background: rgb(var(--button-background));
-  border: 1px rgb(var(--radioButtonSurface)) solid;
+  background: rgb(var(--background));
+  border: 1px rgb(var(--radioButtonBorder)) solid;
   cursor: not-allowed;
 }
 
@@ -96,16 +94,12 @@
 }
 
 .wideKeyL {
-  color: rgb(var(--textHigh));
-  background: rgb(var(--wideButtonSurface));
   border: none;
   grid-column-start: 1;
   grid-column-end: 3;
 }
 
 .wideKeyR {
-  color: rgb(var(--textHigh));
-  background: rgb(var(--wideButtonSurface));
   border: none;
   grid-column-start: 2;
   grid-column-end: 4;
