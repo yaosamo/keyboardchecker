@@ -77,12 +77,44 @@
   display: flex;
   width: 120px;
   height: 26px;
-  padding: 9.304px;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 5.815px;
-  flex-shrink: 0;
   border-radius: 5px;
   background: #dfdfdf;
+  transition: all 0.1s ease-out;
+}
+
+.radiobutton:hover {
+  background: #d0d0d0;
+}
+
+.radiobutton:active {
+  background: rgb(222, 222, 222);
+  transform: scale(0.96);
+}
+
+.radiobuttonActive {
+  background: white;
+  border: 1px #dfdfdf solid;
+  cursor: not-allowed;
+}
+
+.radiobuttonActive:hover {
+  background: rgb(243, 243, 243);
+}
+
+.wideKeyL {
+  color: white;
+  background: #ff665c;
+  border: none;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.wideKeyR {
+  color: white;
+  background: #ff665c;
+  border: none;
+  grid-column-start: 2;
+  grid-column-end: 4;
 }

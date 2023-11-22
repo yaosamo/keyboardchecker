@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import Key from "./key";
 import MoonalnderKeysL from "./keyboard_moonlander_layers.json";
-import styles from "./styles.module.css";
 
 export default function Keyboard({ keysPressed, keysActive }) {
   const [currentLayerID, setCurrentLayerID] = useState(0);

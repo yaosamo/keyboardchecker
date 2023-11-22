@@ -1,7 +1,5 @@
-import { useState, useEffect } from "react";
 import Key from "./key";
-import keyboardRegular from "./keyboard_moonlander-old.json";
-import styles from "./styles.module.css";
+import keyboardRegular from "./keyboard_regular.json";
 
 export default function Keyboard({ keysPressed, keysActive }) {
   return (

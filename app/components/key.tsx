@@ -10,7 +10,10 @@ export default function Key({ keyboardKey, keysPressed, keysActive }) {
       ${styles.keyboard_key}
       ${isKeyNull && styles.nullKey}
       ${isKeyPressed && styles.keyboard_key_pressed}
-      ${isKeyActive && styles.keyboard_key_active}`}
+      ${isKeyActive && styles.keyboard_key_active}
+      ${keyboardKey.wideL && styles.wideKeyL}
+      ${keyboardKey.wideR && styles.wideKeyR}
+      `}
     >
       {keyboardKey.key}
     </div>
