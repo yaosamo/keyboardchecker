@@ -76,7 +76,7 @@ export default function Home() {
             }`}
             onClick={() => !isKeyboardSplit && keyboardChange()}
           >
-            Split
+            Moonlander
           </button>
           <button
             className={`${styles.radiobutton} ${styles.heading} ${

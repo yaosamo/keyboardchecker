@@ -14,16 +14,14 @@
 }
 
 .keyboard_key {
-  background-color: var(--button-background);
-  border: 1px solid rgb(var(--button-border));
+  background-color: rgb(var(--button-background));
 }
 
 .keyboard_key_pressed {
   transition: all 0.1s ease-out;
   transform: scale(0.94);
   background-color: rgb(var(--button-background-pressed)) !important;
-  border: 1px solid rgb(var(--button-border-pressed)) !important;
-  color: rgb(var(--foreground-light)) !important;
+  color: rgb(var(--textMed)) !important;
 }
 
 .keyboard_key_active {
@@ -36,7 +34,7 @@
 }
 
 .heading {
-  color: #565656;
+  color: rgb(var(--textMed));
   text-align: center;
   font-size: 10px;
   font-style: normal;
@@ -65,14 +63,6 @@
   gap: 0.25rem;
 }
 
-.creativeclub {
-  position: absolute; /* Use 'absolute' if you want it relative to a container */
-  right: 0;
-  bottom: 0;
-  margin-bottom: 0em;
-  margin-right: 0em;
-}
-
 .radiobutton {
   display: flex;
   width: 120px;
@@ -80,40 +70,36 @@
   justify-content: center;
   align-items: center;
   border-radius: 5px;
-  background: #dfdfdf;
+  background: rgb(var(--radioButtonSurface));
   transition: all 0.1s ease-out;
 }
 
 .radiobutton:hover {
-  background: #d0d0d0;
+  background: rgb(var(--radioButtonSurfaceHover));
 }
 
 .radiobutton:active {
-  background: rgb(222, 222, 222);
+  background: rgb(var(--radioButtonSurface));
   transform: scale(0.96);
 }
 
 .radiobuttonActive {
-  background: white;
-  border: 1px #dfdfdf solid;
+  background: rgb(var(--background));
+  border: 1px rgb(var(--radioButtonBorder)) solid;
   cursor: not-allowed;
 }
 
 .radiobuttonActive:hover {
-  background: rgb(243, 243, 243);
+  background: rgb(var(--radioButtonActiveSurfaceHover));
 }
 
 .wideKeyL {
-  color: white;
-  background: #ff665c;
   border: none;
   grid-column-start: 1;
   grid-column-end: 3;
 }
 
 .wideKeyR {
-  color: white;
-  background: #ff665c;
   border: none;
   grid-column-start: 2;
   grid-column-end: 4;
