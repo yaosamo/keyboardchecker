@@ -1,35 +1,43 @@
 "use client"; // This is a client component 👈🏽
 import { useState, useEffect, useRef } from "react";
-import Keyboard from "./components/keyboard";
+import SplitKeyboard from "./components/keyboardSplit";
+import RegularKeyboard from "./components/keyboardRegular";
 import styles from "./components/styles.module.css";
 
 export default function Home() {
+  const creativeClub = "With ♥︎ from Creative Club";
+
   const [keysPressed, setKeysPressed] = useState({});
   const [keysActive, setKeysActive] = useState({});
-  const [history, setHistory] = useState<string[]>([]);
-  const [newKeyOpacity, setNewKeyOpacity] = useState(0); //
+  const [history, setHistory] = useState<string[]>([creativeClub]);
+  const [isKeyboardSplit, setIsKeyboardSplit] = useState(true);
+
+  const keyboardChange = () => {
+    setIsKeyboardSplit((prevState) => !prevState);
+    setKeysActive({});
+    setHistory([creativeClub]);
+  };
 
   const handleKeyDown = (event) => {
-    setHistory((prevHistory) => [
-      event.key,
-      ...prevHistory.slice(0, 12), // Keep only the last 9 plus the new key
-    ]);
+    setHistory((prevHistory) => [event.key, ...prevHistory.slice(0, 12)]);
 
     setKeysPressed((prevKeys) => ({
       ...prevKeys,
       [event.code]: true,
       [event.keyCode]: true,
     }));
+    event.preventDefault();
+    if (event.ctrlKey || event.altKey || event.metaKey) {
+      const blockedKeys = ["a", "c", "v", "x", "s", "p", "f", "r", "d"];
 
-    if (
-      event.code === "Space" ||
-      event.code === "Tab" ||
-      event.code === "Meta" ||
-      event.code === "ArrowUp" ||
-      event.code === "ArrowDown" ||
-      event.code === "META"
-    ) {
-      event.preventDefault(); // Prevent the default action
+      if (blockedKeys.includes(event.key.toLowerCase())) {
+        console.log(
+          `Blocked ${
+            event.ctrlKey ? "Ctrl" : event.metaKey ? "Cmd" : "Alt"
+          } + ${event.key.toUpperCase()}`
+        );
+        event.preventDefault();
+      }
     }
 
     setKeysActive((prevKeys) => ({
@@ -58,12 +66,35 @@ export default function Home() {
     };
   }, [keysPressed]);
   return (
-    <main className="min-h-screen flex flex-col justify-between pl-24 pr-24 pt-16 pb-16">
-      <div className={styles.heading}>Keyboard Checker</div>
-      <Keyboard keysActive={keysActive} keysPressed={keysPressed} />
-      <div className="flex flex-row justify-center">
+    <main className="min-h-screen flex flex-col justify-between pl-32 pr-32 pt-16 pb-16">
+      <div className="flex flex-col gap-4">
+        <div className={styles.heading}>Keyboard Checker</div>
+        <div className="flex flex-row justify-center gap-2">
+          <button
+            className={`${styles.radiobutton} ${styles.heading} ${
+              isKeyboardSplit ? styles.radiobuttonActive : ""
+            }`}
+            onClick={() => !isKeyboardSplit && keyboardChange()}
+          >
+            Split
+          </button>
+          <button
+            className={`${styles.radiobutton} ${styles.heading} ${
+              !isKeyboardSplit ? styles.radiobuttonActive : ""
+            }`}
+            onClick={() => isKeyboardSplit && keyboardChange()}
+          >
+            Regular
+          </button>
+        </div>
+      </div>
+      {isKeyboardSplit ? (
+        <SplitKeyboard keysActive={keysActive} keysPressed={keysPressed} />
+      ) : (
+        <RegularKeyboard keysActive={keysActive} keysPressed={keysPressed} />
+      )}
+      <div className="flex h-3 flex-row justify-center">
         <div className={styles.heading}>
-          {" "}
           <div className="flex flex-row-reverse gap-2">
             {[...history].map((key, index) => {
               let opacity = 1;
@@ -72,15 +103,14 @@ export default function Home() {
               }
               return (
                 <p key={index} style={{ opacity: opacity }}>
-                  {key}
+                  <a target="_blank" href="https://www.patreon.com/yaosamo">
+                    {key}
+                  </a>
                 </p>
               );
             })}
           </div>
         </div>
-        {/* <div className={styles.creativeclub}>
-          Made at the <a>Creative Club</a>
-        </div> */}
       </div>
     </main>
   );

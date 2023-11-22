@@ -306,11 +306,8 @@
     "clusterleft": [
       {
         "key": "⌥",
-        "code": "AltLeft"
-      },
-      {
-        "key": "",
-        "code": null
+        "code": "AltLeft",
+        "wideL": true
       },
       {
         "key": "",
@@ -335,12 +332,9 @@
         "code": null
       },
       {
-        "key": "",
-        "code": null
-      },
-      {
         "key": "Esc",
-        "code": 27
+        "code": 27,
+        "wideR": true
       },
       {
         "key": "⌥",

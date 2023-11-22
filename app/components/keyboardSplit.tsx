@@ -4,7 +4,6 @@ import MoonalnderKeysL from "./keyboard_moonlander_layers.json";
 
 export default function Keyboard({ keysPressed, keysActive }) {
   const [currentLayerID, setCurrentLayerID] = useState(0);
-
   const MoonlanderKeysLayers = MoonalnderKeysL.map((layer) => {
     return {
       ...layer,
@@ -80,9 +79,11 @@ export default function Keyboard({ keysPressed, keysActive }) {
 
   return (
     <main>
-      <button onClick={() => setCurrentLayerID(0)}>Layer 0</button>
-      <button onClick={() => setCurrentLayerID(1)}>Layer 1</button>
-      <div className="pt-10 grid grid-rows-[repeat(5,1fr),2fr] grid-cols-[repeat(7,1fr),5fr,repeat(7,1fr)]">
+      <div className="flex flex-row gap-3">
+        <button onClick={() => setCurrentLayerID(0)}>Layer 0</button>
+        <button onClick={() => setCurrentLayerID(1)}>Layer 1</button>
+      </div>
+      <div className="pt-2 grid grid-rows-[repeat(5,1fr),2fr] grid-cols-[repeat(7,1fr),5fr,repeat(7,1fr)]">
         {MoonlanderKeysLayers[currentLayerID].keys.map(function (
           keyboardKey,
           index
@@ -96,7 +97,6 @@ export default function Keyboard({ keysPressed, keysActive }) {
             />
           );
         })}
-
         <div className="grid grid-row-start-5 row-span-2 grid-cols-[3fr,1fr,3fr] col-start-7 col-span-3 ">
           <div className="grid grid-cols-[1fr,1fr,1fr]">
             {MoonlanderKeysLayers[currentLayerID].clusterleft.map(function (
