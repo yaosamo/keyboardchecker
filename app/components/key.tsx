@@ -1,20 +1,10 @@
+import { useEffect, useState } from "react";
+
 import styles from "./styles.module.css";
 
-function getOperatingSystem() {
-  const platform = window.navigator.platform;
-  const macosPlatforms = ["Macintosh", "MacIntel", "MacPPC", "Mac68K"];
-  const windowsPlatforms = ["Win32", "Win64", "Windows", "WinCE"];
-
-  if (macosPlatforms.indexOf(platform) !== -1) {
-    return "⌘";
-  } else if (windowsPlatforms.indexOf(platform) !== -1) {
-    return "Win";
-  } else {
-    return "Meta";
-  }
-}
-
 export default function Key({ keyboardKey, keysPressed, keysActive }) {
+  const [os, setOS] = useState("");
+
   const isKeyPressed = keysPressed[keyboardKey.code];
   const Span2Cells = keyboardKey.span2;
   const Span3Cells = keyboardKey.span3;
@@ -22,7 +12,23 @@ export default function Key({ keyboardKey, keysPressed, keysActive }) {
   const Space = keyboardKey.space;
   const isKeyActive = keysActive[keyboardKey.code];
   const isKeyNull = keyboardKey.code === null;
-  const os = getOperatingSystem();
+
+  useEffect(() => {
+    function getOperatingSystem() {
+      const platform = window.navigator.platform;
+      const macosPlatforms = ["Macintosh", "MacIntel", "MacPPC", "Mac68K"];
+      const windowsPlatforms = ["Win32", "Win64", "Windows", "WinCE"];
+
+      if (macosPlatforms.indexOf(platform) !== -1) {
+        return "⌘";
+      } else if (windowsPlatforms.indexOf(platform) !== -1) {
+        return "Win";
+      } else {
+        return "Meta";
+      }
+    }
+    setOS(getOperatingSystem());
+  }, []);
 
   if (keyboardKey.code === 91) {
     keyboardKey.key = os;
