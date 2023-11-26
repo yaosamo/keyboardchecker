@@ -5,7 +5,7 @@ import RegularKeyboard from "./components/keyboardRegular";
 import styles from "./components/styles.module.css";
 
 export default function Home() {
-  const creativeClub = "With ♥︎ from Creative Club";
+  const creativeClub = "Designed by Creative Club";
 
   const [keysPressed, setKeysPressed] = useState({});
   const [keysActive, setKeysActive] = useState({});

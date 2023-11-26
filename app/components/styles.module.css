@@ -8,7 +8,6 @@
   border-radius: 5px;
   transition: all 0.1s ease-out;
   text-align: center;
-  min-width: 4vh;
   min-height: 4vw;
   margin: 0.125rem;
 }
@@ -103,4 +102,20 @@
   border: none;
   grid-column-start: 2;
   grid-column-end: 4;
+}
+
+.span2 {
+  grid-column: span 2;
+}
+
+.span2row {
+  grid-row: span 2;
+}
+
+.span3 {
+  grid-column: span 3;
+}
+
+.space {
+  grid-column: span 9;
 }

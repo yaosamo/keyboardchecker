@@ -1,7 +1,104 @@
 [
   {
-    "key": "+ =",
-    "code": 187
+    "key": "Esc",
+    "code": 27
+  },
+  {
+    "key": "F1",
+    "code": 112
+  },
+  {
+    "key": "F2",
+    "code": 113
+  },
+  {
+    "key": "F3",
+    "code": 114
+  },
+  {
+    "key": "F4",
+    "code": 115
+  },
+  {
+    "key": "",
+    "code": null
+  },
+  {
+    "key": "F5",
+    "code": 116
+  },
+  {
+    "key": "F6",
+    "code": 117
+  },
+  {
+    "key": "F7",
+    "code": 118
+  },
+  {
+    "key": "F8",
+    "code": 119
+  },
+  {
+    "key": "",
+    "code": null
+  },
+  {
+    "key": "F9",
+    "code": 120
+  },
+
+  {
+    "key": "F10",
+    "code": 121
+  },
+  {
+    "key": "F11",
+    "code": 122
+  },
+  {
+    "key": "F12",
+    "code": 123
+  },
+  {
+    "key": "",
+    "code": null
+  },
+  {
+    "key": "",
+    "code": null
+  },
+  {
+    "key": "",
+    "code": null
+  },
+  {
+    "key": "",
+    "code": null
+  },
+  {
+    "key": "",
+    "code": null
+  },
+  {
+    "key": "",
+    "code": null
+  },
+  {
+    "key": "",
+    "code": null
+  },
+  {
+    "key": "",
+    "code": null
+  },
+  {
+    "key": "",
+    "code": null
+  },
+  {
+    "key": "~ `",
+    "code": 192
   },
   {
     "key": "1",
@@ -24,18 +121,6 @@
     "code": 53
   },
   {
-    "key": "←",
-    "code": 37
-  },
-  {
-    "key": " ",
-    "code": null
-  },
-  {
-    "key": "→",
-    "code": 39
-  },
-  {
     "key": "6",
     "code": 54
   },
@@ -56,12 +141,55 @@
     "code": 48
   },
   {
-    "key": "— -",
+    "key": "– -",
     "code": 189
   },
   {
-    "key": "Del",
-    "code": 46
+    "key": "+ =",
+    "code": 187
+  },
+  {
+    "key": "Backspace",
+    "code": 8,
+    "span2": true
+  },
+  {
+    "key": "",
+    "code": null
+  },
+  {
+    "key": "Insert",
+    "code": 45
+  },
+  {
+    "key": "Home",
+    "code": 36
+  },
+  {
+    "key": "Page Up",
+    "code": 33
+  },
+  { "key": "", "code": null },
+  {
+    "key": "Num lock",
+    "code": 97
+  },
+  {
+    "key": "/",
+    "code": 111
+  },
+  {
+    "key": "*",
+    "code": 106
+  },
+  {
+    "key": "-",
+    "code": 109
+  },
+  {
+    "key": "Tab",
+    "code": 9,
+    "span2": true
   },
   {
     "key": "Q",
@@ -84,18 +212,6 @@
     "code": 84
   },
   {
-    "key": "LR1",
-    "code": "LR"
-  },
-  {
-    "key": " ",
-    "code": null
-  },
-  {
-    "key": "LR1",
-    "code": "LR"
-  },
-  {
     "key": "Y",
     "code": 89
   },
@@ -116,12 +232,55 @@
     "code": 80
   },
   {
+    "key": "{ [",
+    "code": 219
+  },
+  {
+    "key": "} ]",
+    "code": 221
+  },
+  {
     "key": "| \\",
     "code": 220
   },
   {
-    "key": "⌫",
-    "code": 8
+    "key": "",
+    "code": null
+  },
+  {
+    "key": "Delete",
+    "code": 46
+  },
+  {
+    "key": "End",
+    "code": 35
+  },
+  {
+    "key": "Page Down",
+    "code": 34
+  },
+  { "key": "", "code": null },
+  {
+    "key": "7",
+    "code": 103
+  },
+  {
+    "key": "8",
+    "code": 104
+  },
+  {
+    "key": "9",
+    "code": 105
+  },
+  {
+    "key": "+",
+    "code": 107,
+    "span2row": true
+  },
+  {
+    "key": "Caps Lock",
+    "code": 20,
+    "span2": true
   },
   {
     "key": "A",
@@ -142,18 +301,6 @@
   {
     "key": "G",
     "code": 71
-  },
-  {
-    "key": "Hyper",
-    "code": "Hyper"
-  },
-  {
-    "key": " ",
-    "code": null
-  },
-  {
-    "key": "Meh",
-    "code": "Meh"
   },
   {
     "key": "H",
@@ -180,8 +327,46 @@
     "code": 222
   },
   {
+    "key": "↵",
+    "code": 13,
+    "span2": true
+  },
+  {
+    "key": "",
+    "code": null
+  },
+  {
+    "key": "",
+    "code": null
+  },
+  {
+    "key": "",
+    "code": null
+  },
+  {
+    "key": "",
+    "code": null
+  },
+  {
+    "key": "",
+    "code": null
+  },
+  {
+    "key": "4",
+    "code": 100
+  },
+  {
+    "key": "5",
+    "code": 101
+  },
+  {
+    "key": "6",
+    "code": 102
+  },
+  {
     "key": "Shift",
-    "code": "ShiftLeft"
+    "code": "ShiftLeft",
+    "span3": true
   },
   {
     "key": "Z",
@@ -204,18 +389,6 @@
     "code": 66
   },
   {
-    "key": " ",
-    "code": null
-  },
-  {
-    "key": " ",
-    "code": null
-  },
-  {
-    "key": " ",
-    "code": null
-  },
-  {
     "key": "N",
     "code": 78
   },
@@ -228,7 +401,7 @@
     "code": 188
   },
   {
-    "key": "> .",
+    "key": "> ,",
     "code": 190
   },
   {
@@ -237,114 +410,90 @@
   },
   {
     "key": "Shift",
-    "code": "ShiftRight"
+    "code": "ShiftRight",
+    "span2": true
+  },
+  { "key": "", "code": null },
+  { "key": "", "code": null },
+  {
+    "key": "↑",
+    "code": 38
+  },
+  { "key": "", "code": null },
+  { "key": "", "code": null },
+  {
+    "key": "1",
+    "code": 97
   },
   {
-    "key": "~ `",
-    "code": 192
+    "key": "2",
+    "code": 98
   },
   {
-    "key": "Caps Word",
-    "code": 20
+    "key": "3",
+    "code": 99
   },
   {
-    "key": " ",
-    "code": "Empty"
+    "key": "⏎",
+    "code": 13,
+    "span2row": true
+  },
+  {
+    "key": "Ctr",
+    "code": 17
+  },
+  {
+    "key": "",
+    "code": 91
+  },
+  {
+    "key": "Alt",
+    "code": 18
+  },
+  {
+    "key": "Space",
+    "code": 32,
+    "space": true
+  },
+  {
+    "key": "Alt",
+    "code": 18
+  },
+  {
+    "key": "",
+    "code": 91
+  },
+  {
+    "key": "Ctr",
+    "code": 17
+  },
+  {
+    "key": "",
+    "code": null
   },
   {
     "key": "←",
     "code": 37
   },
   {
-    "key": "→",
-    "code": 39
-  },
-  {
-    "key": " ",
-    "code": null
-  },
-  {
-    "key": " ",
-    "code": null
-  },
-  {
-    "key": " ",
-    "code": null
-  },
-  {
-    "key": " ",
-    "code": null
-  },
-  {
-    "key": " ",
-    "code": null
-  },
-  {
-    "key": "↑",
-    "code": 38
-  },
-  {
     "key": "↓",
     "code": 40
   },
   {
-    "key": "{ [",
-    "code": 219
-  },
-  {
-    "key": "} ]",
-    "code": 221
-  },
-  {
-    "key": "LR 1",
-    "code": "LR"
-  },
-  {
-    "key": "⌥",
-    "code": "AltLeft"
+    "key": "→",
+    "code": 39
   },
   {
     "key": "",
     "code": null
   },
   {
-    "key": "",
-    "code": null
+    "key": "0",
+    "code": 96,
+    "span2": true
   },
   {
-    "key": "␣",
-    "code": 32
-  },
-  {
-    "key": "⌫",
-    "code": 8
-  },
-  {
-    "key": "⌘",
-    "code": 91
-  },
-  {
-    "key": "",
-    "code": null
-  },
-  {
-    "key": "",
-    "code": null
-  },
-  {
-    "key": "Esc",
-    "code": 27
-  },
-  {
-    "key": "⌥",
-    "code": "AltRight"
-  },
-  {
-    "key": "Tab",
-    "code": 9
-  },
-  {
-    "key": "↵",
-    "code": 13
+    "key": ".",
+    "code": 110
   }
 ]
