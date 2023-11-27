@@ -38,15 +38,15 @@ export default function Key({ keyboardKey, keysPressed, keysActive }) {
     <div
       className={`
       ${styles.keyboard_key}
-      ${isKeyNull && styles.nullKey}
-      ${isKeyPressed && styles.keyboard_key_pressed}
-      ${isKeyActive && styles.keyboard_key_active}
-      ${keyboardKey.wideL && styles.wideKeyL}
-      ${keyboardKey.wideR && styles.wideKeyR}
-      ${Span2Cells && styles.span2}
-      ${Span3Cells && styles.span3}
-      ${Span2Row && styles.span2row}
-      ${Space && styles.space}
+      ${isKeyNull ? styles.nullKey : ""}
+      ${isKeyPressed ? styles.keyboard_key_pressed : ""}
+      ${isKeyActive ? styles.keyboard_key_active : ""}
+      ${keyboardKey.wideL ? styles.wideKeyL : ""}
+      ${keyboardKey.wideR ? styles.wideKeyR : ""}
+      ${Span2Cells ? styles.span2 : ""}
+      ${Span3Cells ? styles.span3 : ""}
+      ${Span2Row ? styles.span2row : ""}
+      ${Space ? styles.space : ""}
       `}
     >
       {keyboardKey.key}
