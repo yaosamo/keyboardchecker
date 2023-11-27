@@ -15,6 +15,7 @@
 :root {
   --background: 208, 205, 204;
 
+  --textContrast: 0, 0, 0;
   --textMed: 39, 37, 35;
 
   --button-background: 235, 232, 231;
@@ -31,6 +32,7 @@
   :root {
     --background: 21, 19, 19;
 
+    --textContrast: 0, 0, 0;
     --textMed: 188, 179, 179;
 
     --button-background: 37, 34, 34;

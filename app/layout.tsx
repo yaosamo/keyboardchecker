@@ -21,7 +21,7 @@ export const metadata = {
   creator: "Yaric Sam",
   twitter: {
     card: "summary_large_image",
-    title: "Next.js",
+    title: "Keyboard Checker - Test Your Keyboard Layout Online",
     description:
       "Efficiently test your keyboard layout - be it Split or Regular - with our comprehensive online tool. Perfect for checking key functionality and layout compatibility.",
     creator: "@yaosamo",
@@ -31,26 +31,18 @@ export const metadata = {
     google: "google",
     yandex: "yandex",
     yahoo: "yahoo",
-    other: {
-      me: ["my-email", "my-link"],
-    },
   },
   openGraph: {
-    title: "Next.js",
-    description: "The React Framework for the Web",
-    url: "https://nextjs.org",
-    siteName: "Next.js",
+    title: "Keyboard Checker - Test Your Keyboard Layout Online",
+    description:
+      "Efficiently test your keyboard layout - be it Split or Regular - with our comprehensive online tool. Perfect for checking key functionality and layout compatibility.",
+    url: "https://keyboard-checker.com",
+    siteName: "Keyboard Checker",
     images: [
       {
-        url: "https://nextjs.org/og.png",
-        width: 800,
-        height: 600,
-      },
-      {
-        url: "https://nextjs.org/og-alt.png",
-        width: 1800,
-        height: 1600,
-        alt: "My custom alt",
+        url: "https://keyboard-checker.com/og.png",
+        width: 1200,
+        height: 630,
       },
     ],
     locale: "en_US",
@@ -77,7 +69,6 @@ export default function RootLayout({
           name="description"
           content="Efficiently test your keyboard layout - be it Split or Regular - with our comprehensive online tool. Perfect for checking key functionality and layout compatibility."
         />
-        <link rel="icon" href="/path-to-your/favicon.ico" type="image/x-icon" />
       </Head>
       <body className={inter.className}>
         {children}
