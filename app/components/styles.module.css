@@ -119,3 +119,20 @@
 .space {
   grid-column: span 9;
 }
+
+.layer {
+  width: 1em;
+  height: 2em;
+  background-color: rgb(var(--button-background));
+  border-radius: 1em;
+}
+
+.layer:active {
+  transition: all 0.1s ease-out;
+  background-color: rgb(var(--button-background-pressed));
+  transform: scale(0.9);
+}
+
+.layerSelected {
+  background-color: rgb(var(--button-background-pressed)) !important;
+}

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Key from "./key";
 import MoonalnderKeysL from "./keyboard_moonlander_layers.json";
+import styles from "./styles.module.css";
 
 export default function Keyboard({ keysPressed, keysActive }) {
   const [currentLayerID, setCurrentLayerID] = useState(0);
@@ -79,11 +80,21 @@ export default function Keyboard({ keysPressed, keysActive }) {
 
   return (
     <main>
-      <div className="flex flex-row gap-3">
-        <button onClick={() => setCurrentLayerID(0)}>Layer 0</button>
-        <button onClick={() => setCurrentLayerID(1)}>Layer 1</button>
+      <div className="flex flex-row gap-2">
+        <button
+          className={`
+          ${styles.layer}
+          ${currentLayerID === 0 && styles.layerSelected}`}
+          onClick={() => setCurrentLayerID(0)}
+        ></button>
+        <button
+          className={`
+          ${styles.layer}
+          ${currentLayerID === 1 && styles.layerSelected}`}
+          onClick={() => setCurrentLayerID(1)}
+        ></button>
       </div>
-      <div className="pt-2 grid grid-rows-[repeat(5,1fr),2fr] grid-cols-[repeat(7,1fr),5fr,repeat(7,1fr)]">
+      <div className="pt-4 grid grid-rows-[repeat(5,1fr),2fr] grid-cols-[repeat(7,1fr),5fr,repeat(7,1fr)]">
         {MoonlanderKeysLayers[currentLayerID].keys.map(function (
           keyboardKey,
           index
