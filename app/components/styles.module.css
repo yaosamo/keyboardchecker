@@ -62,6 +62,16 @@
   gap: 0.25rem;
 }
 
+.radioGroup {
+  width: max-content;
+  border: 1px solid rgb(var(--radioButtonSurface));
+  display: inline-flex;
+  padding: 0.25em;
+  justify-content: center;
+  border-radius: 0.75em;
+  margin: 0 auto;
+}
+
 .radiobutton {
   display: flex;
   width: 120px;
@@ -69,12 +79,11 @@
   justify-content: center;
   align-items: center;
   border-radius: 5px;
-  background: rgb(var(--radioButtonSurface));
   transition: all 0.1s ease-out;
 }
 
 .radiobutton:hover {
-  background: rgb(var(--radioButtonSurfaceHover));
+  background: rgb(var(--radioButtonSurfaceHover), 0.1);
 }
 
 .radiobutton:active {
@@ -83,13 +92,8 @@
 }
 
 .radiobuttonActive {
-  background: rgb(var(--background));
-  border: 1px rgb(var(--radioButtonBorder)) solid;
+  background: rgb(var(--radioButtonSurfaceHover)) !important;
   cursor: not-allowed;
-}
-
-.radiobuttonActive:hover {
-  background: rgb(var(--radioButtonActiveSurfaceHover));
 }
 
 .wideKeyL {

@@ -69,7 +69,7 @@ export default function Home() {
     <main className="min-h-screen flex flex-col justify-between pl-32 pr-32 pt-16 pb-16">
       <div className="flex flex-col gap-4">
         <div className={styles.heading}>Keyboard Checker</div>
-        <div className="flex flex-row justify-center gap-2">
+        <div className={styles.radioGroup}>
           <button
             className={`${styles.radiobutton} ${styles.heading} ${
               isKeyboardSplit ? styles.radiobuttonActive : ""
